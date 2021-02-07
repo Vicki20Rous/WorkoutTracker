@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "devstart": "node -r dotenv/config server.js",
+    "watch": "nodemon -r dotenv/config server.js",
+    "seed": "node -r dotenv/config seeders/seed.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +21,11 @@
   },
   "homepage": "https://github.com/Vicki20Rous/WorkoutTracker#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongod": "^2.0.0",
     "mongoose": "^5.11.14",
     "morgan": "^1.10.0"
-  }
+  },
+  "devDependencies": {}
 }
